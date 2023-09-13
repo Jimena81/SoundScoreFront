@@ -1,11 +1,14 @@
-import './logIn.css';
-import Router from '../../Configuration/Router';
+import './logInPage.css';
+
+import LogIn from '../../components/atoms/LogIn/LogIn';
 
 
 
 function LogInPage() {
   return (
-    <div>LogInPage</div>
+    <div>
+      <LogIn/>
+    </div>
   )
 }
 
