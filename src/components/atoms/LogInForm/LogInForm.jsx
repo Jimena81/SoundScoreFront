@@ -1,4 +1,4 @@
-import recordPlayerLogo from '../../../assets/images/recordPlayerLogo.jpg'
+
 
 
 export default function LogIn() {
@@ -7,14 +7,11 @@ export default function LogIn() {
         
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img
-              className="mx-auto h-10 w-auto"
-              src={recordPlayerLogo}
-              alt="Your Company"
-            />
-            <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-              Sign in to your account
+            
+            <h2 className="mt-10 font-sans text-2xl font-bold leading-9 tracking-tight text-gray-900">
+              Log in to your account
             </h2>
+            <p>Feel the music</p>
           </div>
   
           <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
@@ -61,17 +58,17 @@ export default function LogIn() {
               <div>
                 <button
                   type="submit"
-                  className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="bg-custome flex w-full justify-center rounded-md px-3 py-1.5 text-s leading-6  shadow-sm"
                 >
-                  Sign in
+                  Log in
                 </button>
               </div>
             </form>
   
             <p className="mt-10 text-center text-sm text-gray-500">
               Not a member?{' '}
-              <a href="#" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
-                Start a 14 day free trial
+              <a href="/SignUp" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+                Sign Up with us now
               </a>
             </p>
           </div>

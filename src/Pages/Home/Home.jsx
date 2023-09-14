@@ -6,7 +6,7 @@ function Home() {
     <div className='mainContainer'>
         <img className='mainLogo' src={recordPlayerLogo} alt="Logo" />
         <h1 className='mainTitle'>SoundScore</h1>
-        <a href="http://"><button className='btnFirst'>Get Started</button></a>
+        <a href="/LogIn"><button className='btnFirst'>Get Started</button></a>
     </div>
   )
 }

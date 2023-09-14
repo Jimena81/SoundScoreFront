@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-custome{
+    background-color: #0AC4C1;
+    color: #fff;
+    font-weight: 700;
+    
+}

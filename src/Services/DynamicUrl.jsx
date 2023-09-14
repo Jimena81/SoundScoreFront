@@ -1,4 +1,4 @@
-const DynamicUrl ='https://api.spotify.com/v1/albums{id}';
+const DynamicUrl ='https://localhost:8000';
 
 
 

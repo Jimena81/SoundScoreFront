@@ -5,7 +5,7 @@
     width:100%;
     bottom:0;
     position:fixed;
-    background-color: #f4f4f4;
+    background-color: #0AC4C1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,7 +16,7 @@
     
     .f_icon_text {
     
-    font-family: Poppins;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
     font-size: 15px;
     font-weight: 250;
     line-height: 15px;
@@ -39,7 +39,7 @@
     }
     
     .f_menu_item:hover {
-        background-color:#f4f4f4;
+        background-color:#fff;
         border-radius: 5px;  
         
     }
