@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <>
       <footer className="footer">
-        <a className="f_link">
+        <a href='/NewRealeses' className="f_link">
           <div className="f_menu_item">
             <img className="f_icon" src={home} alt="" />
             <p className="f_icon_text">Home</p>
