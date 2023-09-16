@@ -4,6 +4,20 @@ import Footer from "../../components/atoms/footer/Footer"
 import LpCard from '../../components/atoms/LpCard/LpCard'
 
 function NewRealeses() {
+  const album = {
+    name: "Nombre del Álbum",
+    images: [
+      {
+        url: "URL de la imagen del álbum"
+      }
+    ]
+  };
+  const name = "Nombre del Artista";
+  const artists = [
+    {
+      name: "Nombre del Artista"
+    }
+  ];
   return (
     <div>
         <NavBar/>
@@ -13,11 +27,10 @@ function NewRealeses() {
         </div>
         
         <div className='flex flex-row gap-2 flew-wrap'>
-            <LpCard/>
-            <LpCard/>
-            <LpCard/>
-            <LpCard/>
+            <LpCard album={album} name={name} artists={artists}/>
+            
         </div>
+        
         <Footer/>
     </div>
   )

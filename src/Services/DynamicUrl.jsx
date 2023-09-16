@@ -1,5 +1,9 @@
-const DynamicUrl ='https://localhost:8000';
+
+const BASE_URL ='http://localhost:8000';
 
 
 
-export default DynamicUrl;
+export const getReviewsUrl =()=>{
+
+    return `${BASE_URL}/api/reviews`;
+};

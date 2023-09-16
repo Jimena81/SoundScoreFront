@@ -1,13 +1,8 @@
-import useFetch from "../components/Hooks/useFetch";
-import DynamicUrl from "../components/Services/DynamicUrl";
+import { getReviewsUrl } from '../Services/DynamicUrl';
+import useFetch from '../Hooks/UseFetch';
 
-const ReviewService = () => {
-    const data = useFetch (`${DynamicUrl}/review/create`);
-        return (
-            <div>
-              <pre>{JSON.stringify(data, null, 2)}</pre>
-            </div>
-          );    
+export function getReviews() {
+  const ReviewsUrl = getReviewsUrl();
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  return useFetch(ReviewsUrl);
 }
-
-export default ReviewService;
