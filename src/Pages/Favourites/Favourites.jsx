@@ -1,18 +1,16 @@
 import NavBar from "../../components/atoms/NavBar/NavBar"
-import ReviewSection from "../../components/molecules/ReviewSection/ReviewSection"
+import FavouriteList from "../../components/atoms/FavouriteList/FavouriteList"
 import Footer from "../../components/atoms/footer/Footer"
 
 
-
-function AllReviews() {
+function Favourites() {
   return (
     <div>
         <NavBar/>
-        <ReviewSection/>
+       <FavouriteList/>
         <Footer/>
-        
     </div>
   )
 }
 
-export default AllReviews
+export default Favourites

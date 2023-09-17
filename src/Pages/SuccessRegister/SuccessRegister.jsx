@@ -10,7 +10,7 @@ function SuccessRegister() {
       <h2 className='sucTitle'>Yeay!  Completed</h2>
       <h4 className='sucSubtitle'>Now you are able to make some reviews or listen some good music</h4>
      
-      <a href="/NewReleases"><button className='bg-custome flex justify-center rounded-md mt-5 px-6 py-1.5 text-s leading-6 shadow-sm'>Let's Go</button></a>
+      <a href="/NewRealeses"><button className='bg-custome flex justify-center rounded-md mt-5 px-6 py-1.5 text-s leading-6 shadow-sm'>Let's Go</button></a>
       </div>
 
     </div>

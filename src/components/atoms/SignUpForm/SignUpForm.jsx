@@ -1,5 +1,5 @@
 import back from '../../../assets/images/back.png'
-import axios from 'axios'; // Asegúrate de importar Axios
+import axios from 'axios'; 
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
 
@@ -9,8 +9,6 @@ export default function SignUp() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const navigateTo = useNavigate();
-
-  
 
   const handleSubmit = async (event) => {
     event.preventDefault();

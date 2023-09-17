@@ -7,7 +7,7 @@ import NewRealeses from "../Pages/NewRealeses/NewRealeses";
 import PostReview from "../Pages/PostReview/PostReview";
 import AllReviews from "../Pages/AllReviews/AllReviews";
 import LpDetail from "../Pages/LpDetail/LpDetail";
-
+import Favourites from "../Pages/Favourites/Favourites";
 
 
 const Router = () => {
@@ -22,6 +22,7 @@ const Router = () => {
                 <Route path="/LpDetail" element={<LpDetail/>}></Route>
                 <Route path="/PostReview" element={<PostReview/>}></Route>
                 <Route path="/AllReviews" element={<AllReviews/>}></Route>
+                <Route path="/Favourites" element={<Favourites/>}></Route>
                 
             </Routes>
         </BrowserRouter>

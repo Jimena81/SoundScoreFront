@@ -14,13 +14,13 @@ const Footer = () => {
             <p className="f_icon_text">Home</p>
           </div>
         </a>
-        <a>
+        <a href='/Favourites'>
         <div className="f_menu_item">
             <img className="f_icon" src={like} alt="" />
             <p className="f_icon_text">Favorites</p>
           </div>
         </a>
-        <a>
+        <a href='/AllReviews'>
           <div className="f_menu_item">
             <img className="f_icon" src={chat} alt="" />
             <p className="f_icon_text">Reviews</p>
