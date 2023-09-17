@@ -7,7 +7,7 @@ function AllReviews() {
   return (
     <div>
         <NavBar/>
-        <Card/>
+        
         <Footer/>
         
     </div>
