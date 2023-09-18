@@ -2,6 +2,7 @@
 const clientId = 'c2137040fb2740258b47d7d2f614ca69';
 const clientSecret = '129a7cb4e2314cbe82057c862da34a04';
 
+
 export async function _getToken() {
   const result = await fetch('https://accounts.spotify.com/api/token', {
     method: 'POST',
@@ -9,7 +10,7 @@ export async function _getToken() {
       'Content-Type': 'application/x-www-form-urlencoded',
       'Authorization': 'Basic ' + btoa(clientId + ':' + clientSecret)
     },
-    body: 'grant_type=client_credentials&client_id=your-client-id&client_secret=your-client-secret'
+    body: 'grant_type=client_credentials'
   });
 
   const data = await result.json();

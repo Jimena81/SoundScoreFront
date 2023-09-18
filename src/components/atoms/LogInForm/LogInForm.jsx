@@ -18,6 +18,9 @@ export const LoginForm = () => {
       console.log('Response Status:', status);
       console.log('Response Data:', data);
       
+      const authToken = response.data.token; 
+      localStorage.setItem('authToken', authToken);
+      
       navigateTo('/NewRealeses');
     } catch (error) {
       

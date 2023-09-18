@@ -10,6 +10,8 @@ import LpDetail from "../Pages/LpDetail/LpDetail";
 import Favourites from "../Pages/Favourites/Favourites";
 
 
+
+
 const Router = () => {
     return (
         <BrowserRouter>
@@ -23,6 +25,7 @@ const Router = () => {
                 <Route path="/PostReview" element={<PostReview/>}></Route>
                 <Route path="/AllReviews" element={<AllReviews/>}></Route>
                 <Route path="/Favourites" element={<Favourites/>}></Route>
+                
                 
             </Routes>
         </BrowserRouter>

@@ -1,16 +1,10 @@
-
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
-
-
-
 function ReviewSection() {
-  
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    
     axios.get('http://localhost:8000/api/reviews')
       .then(response => {
         setReviews(response.data);
@@ -29,18 +23,12 @@ function ReviewSection() {
           <li key={review.id} className="ml-5 mr-4 w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
             <h4 className="text-gray-700 text-base font-semibold">{review.title}</h4>
             <p className="text-gray-700 mr-5">{review.content}</p>
+            <p className="text-gray-500 mt-2">Created by: {review.user ? review.user.name : 'Unknown User'}</p>
           </li>
         ))} 
       </ul>
-     
     </div>
   );
 }
 
-
-  
-  
-  
-  
-
-export default ReviewSection
+export default ReviewSection;
