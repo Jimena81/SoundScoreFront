@@ -31,14 +31,14 @@ function NavBar() {
     setAuthToken(null);
     navigateTo('/')
     setIsLoggedIn(false)
-    console.log("Usuario deslogueado");
+    console.log("User Logout");
 
   };
 
   return (
     <div className="navbar">
       <div className="logo w-12">
-        <a href="/NewRealeses">
+        <a href="/NewReleases">
         <img src={recordPlayerLogo} alt="Logo" /></a>
       </div>
       {isLoggedIn ? (

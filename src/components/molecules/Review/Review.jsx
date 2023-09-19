@@ -21,6 +21,7 @@ function Review() {
         try {
           const response = await axios.get('http://localhost:8000/api/user', requestOptions); 
           setUser(response.data);
+          console.log(response.data)
         } catch (error) {
           console.error('Error al obtener la información del usuario', error);
         }
@@ -37,7 +38,7 @@ function Review() {
       const reviewData = {
         title,
         content,
-        user_name: user ? user.username : 'Unknown User', // Utiliza un valor predeterminado si el usuario aún no está disponible
+        user_name: user ? user.username : 'Unknown User',
       };
       
       const response = await axios.post('http://localhost:8000/api/reviews', reviewData);
@@ -54,7 +55,7 @@ function Review() {
       <form className='flex flex-col gap-5 px-8'>
         <input name="title" type='text' placeholder='Title' value={title} onChange={(event) => setTitle(event.target.value)} />
         <input name="content" type='text' placeholder='Content' value={content} onChange={(event) => setContent(event.target.value)} />
-        <p className="text-gray-500 mt-2">Username: {user ? user.username : 'Loading...'}</p>
+        <p className="text-gray-500 mt-2">Username: {user ? user.name : 'Loading...'}</p>
         <button onClick={handleSubmit} className="bg-custome inline-block rounded-full bg-primary px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
           Create
         </button>

@@ -21,7 +21,7 @@ export const LoginForm = () => {
       const authToken = response.data.token; 
       localStorage.setItem('authToken', authToken);
       
-      navigateTo('/NewRealeses');
+      navigateTo('/NewReleases');
     } catch (error) {
       
       console.error('Error al logear', error);

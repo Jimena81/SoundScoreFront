@@ -1,4 +1,4 @@
-import './newRealeses.css'
+import './newReleases.css'
 import  { useEffect, useState } from 'react';
 import SpotifyService from '../../Configuration/SpotifyService';
 import NavBar from "../../components/atoms/NavBar/NavBar"
@@ -24,24 +24,20 @@ function NewRealeses() {
   }, []);
   return (
     <div>
-        <NavBar/>
-        <div className="flex justify-between">
-            <h3 className="ml-1.5 mt-3">NEW REALESES</h3>
-            <h5 className="NrSubtitle">VIEW ALL</h5>
-        </div>
-        
-         <div className='flex flex-row gap-2 flew-wrap mt-5'>
-         {Array.isArray(albums) && albums.length > 0 ? (
-          albums.map((album) => (
-             <LpCard key={album.id} album={album} />
-             
-          ))
-        ) : (
-          <p>No se encontraron álbumes.</p>
-        )}
-            
-        </div>
-         
+       <NavBar/>
+          <div className='bg-white m-20'>
+            <h3 className="ml-4 mb-8 mr-4 mt-8 border-b-2 border-black-800">NEW RELEASES</h3>
+                  
+            <div className='albumsContainer '>
+              {Array.isArray(albums) && albums.length > 0 ? (
+                  albums.map((album) => (
+                    <LpCard key={album.id} album={album} /> 
+                    ))
+                        ) : (
+                      <p>No se encontraron álbumes.</p>
+                      )}
+            </div>
+          </div>
         <Footer/>
     </div>
   )
