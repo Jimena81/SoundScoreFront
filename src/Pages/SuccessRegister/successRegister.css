@@ -1,0 +1,14 @@
+.sucTitle{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.sucSubtitle{
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    margin-left: 25px;
+    margin-right: 22px;
+    color:gray
+}

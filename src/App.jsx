@@ -1,18 +1,30 @@
-//import { useState } from 'react'
 
+import  Router  from './Configuration/Router'
+import  { useEffect, useState } from 'react';
 
 import './App.css'
 
-function App() {
-  //const [count, setCount] = useState(0)
 
+function App() {
+  // eslint-disable-next-line no-unused-vars
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    
+    const authToken = localStorage.getItem('authToken');
+
+    if (authToken) {
+    
+      setIsLoggedIn(true);
+    } else {
+      setIsLoggedIn(false);
+    }
+  }, []);
   return (
     <>
-      <div>
-        hola mundo
-      </div>
       
-      
+      <Router></Router>
+    
     </>
   )
 }

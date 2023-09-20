@@ -1,21 +1,27 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (DynamicUrl) => {
+function useFetch (url) {
     const [data, setData] = useState([]);
+    const [loading, setLoading]= useState(true);
 
     useEffect(() => {
-    const fetchData = async () => {
-    const response = await fetch(DynamicUrl);
-    const json = await response.json();
-    setData(json);
+      async function fetchData() {
+        try {
+          const response = await fetch(url);
+          const jsonData = await response.json();
+          setData(jsonData);
+          setLoading(false);
+    } catch(error) {
+      console.error('Error fetchig data:', error);
+      setLoading(false);
+    }
+  } 
     
-    console.log(json);
-    };
 
     fetchData();
-  }, [DynamicUrl]); //array de dependencia
+  }, [url]); //array de dependencia
 
-    return data; 
-};
+    return {data, loading}; 
+}
 
 export default useFetch
