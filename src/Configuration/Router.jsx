@@ -25,11 +25,8 @@ const Router = () => {
                 <Route path="/PostReview" element={<PostReview/>}></Route>
                 <Route path="/AllReviews" element={<AllReviews/>}></Route>
                 <Route path="/Favourites" element={<Favourites/>}></Route>
-                <Route path="/LpDetail" element={<LpDetail/>}></Route>
-               
-               
-                
-                
+                <Route path="/album/:id" element={<LpDetail/>}></Route>
+
             </Routes>
         </BrowserRouter>
     );

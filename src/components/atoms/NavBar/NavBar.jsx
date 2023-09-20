@@ -37,8 +37,8 @@ function NavBar() {
 
   return (
     <div className="navbar">
-      <div className="logo w-12">
-        <a href="/NewReleases">
+      <div className="logo w-14">
+        <a href="/">
         <img src={recordPlayerLogo} alt="Logo" /></a>
       </div>
       {isLoggedIn ? (

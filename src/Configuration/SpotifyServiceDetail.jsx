@@ -7,6 +7,7 @@ let token = '';
 
 const getAccessToken = async () => {
   if (!token) {
+    try{
     const basicAuth = btoa(`${CLIENT_ID}:${CLIENT_SECRET}`);
     const response = await axios.post(
       'https://accounts.spotify.com/api/token',
@@ -19,12 +20,16 @@ const getAccessToken = async () => {
       }
     );
     token = response.data.access_token;
+  } catch (error) {
+    console.error('Error al obtener el token de acceso de Spotify:', error);
+    throw error;
+  }
   }
   return token;
 };
 
 const SpotifyServiceDetail = {
-  getAlbums: async () => {
+  getAccessToken: async () => {
     const accessToken = await getAccessToken();
     const headers = {
       Authorization: `Bearer ${accessToken}`,
@@ -46,7 +51,7 @@ const SpotifyServiceDetail = {
       throw error;
     }
   },
-  getAlbum: async (albumId) => {
+  getAlbum: async (id) => {
     const accessToken = await getAccessToken();
     const headers = {
       Authorization: `Bearer ${accessToken}`,
@@ -54,7 +59,7 @@ const SpotifyServiceDetail = {
 
     try {
       const response = await axios.get(
-        `https://api.spotify.com/v1/albums/${albumId}`,
+        `https://api.spotify.com/v1/albums/${id}`,
         { headers }
       );
       return response.data; // Devuelve los detalles del álbum

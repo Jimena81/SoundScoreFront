@@ -1,6 +1,23 @@
 import  { useState, useEffect } from "react";
 import axios from 'axios';
-
+import sound from '../../../assets/images/Sound.png'
+import back from '../../../assets/images/back.png'
+function generateStars(rating) {
+  const stars = [];
+  for (let i = 1; i <= 5; i++) {
+    stars.push(
+      <span
+        key={i}
+        className={`text-lg ${
+          i <= rating ? 'text-yellow-500' : 'text-gray-400'
+        }`}
+      >
+        ★
+      </span>
+    );
+  }
+  return stars;
+}
 function ReviewSection() {
   const [reviews, setReviews] = useState([]);
   const [user, setUser] = useState(null);
@@ -69,22 +86,28 @@ function ReviewSection() {
   return (
 
     <div className="p-5">
-      <h1 className="text-gray-700 font-sans text-2xl font-semibold mt-8 border-b-2">User Reviews</h1>
+      <div className="flex justify-between mt-2 border-b-2">
+      <h1 className="text-gray-800 font-sans text-xl font-semibold mt-8  lg:text-2xl ml-6">User Reviews</h1>
+      <a href="/PostReview"><img className="w-6 h-6 mt-8" src={back} alt="" /></a>
+      </div>
       <div>
-      <ul className="w-96">
+      <ul className="w-96 mb-8 lg:flex w-11/12 ml-6 gap-2">
         {reviews.map(review => (
-          <li key={review.id} className=" mr-4 w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
-            
-            <h4 className="text-gray-700 text-based font-semibold">{review.title}</h4>
-            <p className="text-gray-700 mr-5">{review.content}</p>
-            
-            <div className="flex gap-2 ">
-              <img className="mt-5 inline-block h-6 w-6 rounded-full ring-2 ring-white"
-          src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-          alt=""/>
-        <p className="text-gray-500 mt-5">{user ? user.name : 'Loading...'}</p>
-        </div>
-          </li>
+        <li key={review.id} className=" sm:mr-4 w-full border-b-4 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+          <div className="flex lg:">
+            <img className="sm:mt-2 inline-block h-8 w-8 ring-2 ring-white  lg:mt-1" src={sound} alt="sound"/>
+            <div className="flex flex-col sm:ml-2 mr-4 lg:ml-6">
+              <h4 className="text-gray-700 text-sm font-semibold ml-2">{review.title}</h4>
+              <p className="text-gray-500 text-sm ml-2">{user ? user.name : 'Loading...'}</p>
+              <div className="flex items-center ml-2">
+                    <span className="text-gray-700 text-sm mr-1">Rating:</span>
+                    {/* Mostrar el rating aquí */}
+                    {generateStars(review.rating)}{/* Supongamos que tienes una función generateStars que muestra estrellas */}
+                  </div>
+            </div>
+          </div>
+            <p className="text-gray-700 text-sm mr-6 mt-2">{review.content}</p>
+        </li>
         ))} 
       </ul>
       </div>
