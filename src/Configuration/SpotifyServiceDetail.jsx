@@ -52,6 +52,7 @@ const SpotifyServiceDetail = {
     }
   },
   getAlbum: async (id) => {
+    console.log(id)
     const accessToken = await getAccessToken();
     const headers = {
       Authorization: `Bearer ${accessToken}`,

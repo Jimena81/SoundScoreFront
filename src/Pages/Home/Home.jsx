@@ -1,5 +1,5 @@
 import './home.css'
-import recordPlayerLogo from '../../assets/images/recordPlayerLogo.jpg'
+import recordPlayerLogo from '../../assets/images/tocadiscosLogo.png'
 
 function Home() {
   return (
