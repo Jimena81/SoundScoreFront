@@ -87,17 +87,17 @@ function ReviewSection() {
 
     <div className="p-5">
       <div className="flex justify-between mt-2 border-b-2">
-      <h1 className="text-gray-800 font-sans text-xl font-semibold mt-8  lg:text-2xl ml-6">User Reviews</h1>
+      <h1 className="text-gray-800 font-sans text-xl font-semibold mt-8  ">User Reviews</h1>
       <a href="/PostReview"><img className="w-6 h-6 mt-8" src={back} alt="" /></a>
       </div>
       <div>
-      <ul className="w-96 mb-8 lg:flex w-11/12 ml-6 gap-2">
+      <ul className="w-96 mb-8 ">
         {reviews.map(review => (
-        <li key={review.id} className=" sm:mr-4 w-full border-b-4 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+        <li key={review.id} className=" mr-4 w-full border-b-4 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
           <div className="flex lg:">
-            <img className="sm:mt-2 inline-block h-8 w-8 ring-2 ring-white  lg:mt-1" src={sound} alt="sound"/>
+            <img className="mt-2 inline-block h-8 w-8 ring-2 ring-white  " src={sound} alt="sound"/>
             <div className="flex flex-col sm:ml-2 mr-4 lg:ml-6">
-              <h4 className="text-gray-700 text-sm font-semibold ml-2">{review.title}</h4>
+              <h4 className="text-gray-700 text-sm font-semibold ml-2 mr-6">{review.title}</h4>
               <p className="text-gray-500 text-sm ml-2">{user ? user.name : 'Loading...'}</p>
               <div className="flex items-center ml-2">
                     <span className="text-gray-700 text-sm mr-1">Rating:</span>
@@ -106,7 +106,7 @@ function ReviewSection() {
                   </div>
             </div>
           </div>
-            <p className="text-gray-700 text-sm mr-6 mt-2">{review.content}</p>
+            <p className="text-gray-700 text-sm mr-10 mt-2">{review.content}</p>
         </li>
         ))} 
       </ul>

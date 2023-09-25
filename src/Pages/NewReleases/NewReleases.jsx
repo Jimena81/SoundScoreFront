@@ -25,8 +25,8 @@ function NewRealeses() {
   return (
     <div>
        <NavBar/>
-          <div className='bg-white m-20'>
-            <h3 className="ml-4 mb-8 mr-4 mt-8 border-b-2 border-black-800">NEW RELEASES</h3>
+          <div className='m-10 mt-20'>
+            <h3 className=" mb-8 mr-4 mt-8 border-b-2 border-black-800">NEW RELEASES</h3>
                   
             <div className='albumsContainer '>
               {Array.isArray(albums) && albums.length > 0 ? (

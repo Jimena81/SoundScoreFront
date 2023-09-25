@@ -1,4 +1,4 @@
-import recordPlayerLogo from '../../../assets/images/recordPlayerLogo.jpg'
+import recordPlayerLogo from '../../../assets/images/tocadiscosLogo.png'
 import "./navBar.css"
 import  { useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -37,12 +37,13 @@ function NavBar() {
 
   return (
     <div className="navbar">
-      <div className="logo w-14">
+      <div className="logo w-16  ">
         <a href="/">
         <img src={recordPlayerLogo} alt="Logo" /></a>
       </div>
+    
       {isLoggedIn ? (
-        <button onClick={handleLogout} className="logout-button">Logout</button>
+        <button onClick={handleLogout} className="logout-button mr-8">Logout</button>
       ) : (
         <div className="not-logged-in-message">Good Bye!</div>
       )}
